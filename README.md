@@ -115,26 +115,30 @@ AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
  ```
  ```
 **void AMain::LookUpAtRate(float Rate)**
+ ```
 {
 AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
-```
+ ```
+
 > Character - CUSTOMIZING - Don't rotate when the camera rotates
 > 
 
-```/*
+ ```
 Don't rotate when the controller rotates
-* Let that just affect the camera
-*/
+Let that just affect the camera
+
 bUseControllerRotationYaw = false;
 bUseControllerRotationPitch = false;
 bUseControllerRotationRoll = false;
-//Configure character movement */
+
+//Configure character movement 
 GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...
 GetCharacterMovement()->RotationRate = FRotator(0.0f, 440.0f, 0.0f); // ... at this rotation rate ( rotate faster )
 GetCharacterMovement()->JumpZVelocity = 450.0f; // high of jump
 GetCharacterMovement()->AirControl = 0.2f;   // allow to move the character in space while it is in the air
-/** Set Size for collision capsule */
+
+//Set Size for collision capsule 
 GetCapsuleComponent()->SetCapsuleSize(48.0f, 105.0f);
 ```
 
