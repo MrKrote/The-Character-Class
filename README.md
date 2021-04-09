@@ -2,7 +2,8 @@
 
 > Meta Keyword
 > 
-```UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Camera", meta = (AllowPrivateAcces = "true"))
+```
+UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Camera", meta = (AllowPrivateAcces = "true"))
 ```
 ***meta = (AllowPrivateAcces = "true") - > it will make accessible inside the blueprint that contains it but not outside of it.***
 
