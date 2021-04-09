@@ -69,17 +69,20 @@ FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamer
 ```
 BaseTurnRate = 65.0f;
 BaseLookUpRate = 65.0f;
- 
-MoveForward{
+ ```
+**MoveForward**
+```
+{
 if ((Controller != nullptr) && (Value != 0.0f)){
 const FRotator Rotation = Controller->GetControlRotation();
 const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
 const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X); 
 AddMovementInput(Direction, Value);
 }}
-
-
-MoveRight{
+```
+**MoveRight**
+```
+{
 if ((Controller != nullptr) && (Value != 0.0f)){
 const FRotator Rotation = Controller->GetControlRotation();
 const FRotator YawRotation(0.0f, Rotation.Yaw, 0.0f);
