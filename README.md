@@ -90,7 +90,7 @@ const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 AddMovementInput(Direction, Value);
 }}
 ```
-**void AMain::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)**
+**void AMain::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) **
 ```
 {
 Super::SetupPlayerInputComponent(PlayerInputComponent);
