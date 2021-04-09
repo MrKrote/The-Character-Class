@@ -145,7 +145,7 @@ GetCapsuleComponent()->SetCapsuleSize(48.0f, 105.0f);
 &nbsp;
 
 > Animation
-> **1. Create an AnimInstance C++ Class**
+> Create an AnimInstance C++ Class
 **.H**
 ```
 public:
@@ -189,7 +189,8 @@ bIsInAir = Pawn->GetMovementComponent()->IsFalling();
 }
 ```
 
-**#2 Animation*+
+**2 Animation**
+
 **2.** Create an Animation -> Animation Blend Space 1D -> Drag and Drop the Anims ( press shift u can see how is it )
 
 Axis Settings -> Horizontal Axis -> Give a Name ( like Speed ) + Maximum Axis Value ( like 375 )
