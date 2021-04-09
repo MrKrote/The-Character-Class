@@ -207,7 +207,8 @@ Axis Settings -> Horizontal Axis -> Give a Name ( like Speed ) + Maximum Axis Va
 **5.** Main_BP -> Animation -> Animation Mode should be Use Animation Blueprint and AnimClass the Animation Class
 
 
-**6.**In Locomotion from Entry -> Idle/Walk/Run (add state)
+**6.**
+In Locomotion from Entry -> Idle/Walk/Run (add state)
 
 From Idle/Walk/Run -> JumpStart (add state) -> jumping up -> transition rule -> is in Air
 
