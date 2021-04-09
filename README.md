@@ -145,7 +145,9 @@ GetCapsuleComponent()->SetCapsuleSize(48.0f, 105.0f);
 &nbsp;
 
 > Animation
+> 
 > Create an AnimInstance C++ Class
+> 
 **.H**
 ```
 public:
@@ -195,11 +197,15 @@ bIsInAir = Pawn->GetMovementComponent()->IsFalling();
 
 Axis Settings -> Horizontal Axis -> Give a Name ( like Speed ) + Maximum Axis Value ( like 375 )
 
+
 **3.** Create an Animation -> Animation Blueprint. Than File -> Reparent BP -> Choise C++ class.So we can access in Blueprint to our custom AnimationProperties function. ( like Tick () method )
+
 
 **4.** AnimGraph -> Right Click , New state machine (Name = Locomotion ) -> Clink in and Add State ( Name = Idle / Walk / Run ) -> Now we can drag and drop our BlendSpace what we created in 2. and the movement speed.
 
+
 **5.** Main_BP -> Animation -> Animation Mode should be Use Animation Blueprint and AnimClass the Animation Class
+
 
 **6.**In Locomotion from Entry -> Idle/Walk/Run (add state)
 
@@ -210,6 +216,7 @@ From JumpStart -> InAir (add state) -> falling_idle -> transition rule -> curren
 From InAir -> Jump End ( add state ) -> jumping_down -> transition rule -> IsInAir -> NOT BOOL 
 
 From JumpEnd -> Idle/Walk/Run -> transition rule -> TimeRemaining (ratio) -> <
+
 
 **7.** bind in MainAnim_BP the Event Blueprint Update Animation with Update Animation Properties
 
